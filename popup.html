@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy With Context</title>
+  <style>
+    body {
+      width: 340px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+
+    h2, h3 { margin-top: 0; }
+
+    #preview, .history-item {
+      padding: 12px;
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      overflow-wrap: anywhere;
+      white-space: pre-wrap;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    #status {
+      min-height: 15px;
+      font-size: 12px;
+      color: #475569;
+    }
+
+    button {
+      padding: 9px;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background: #94a3b8;
+      cursor: not-allowed;
+    }
+
+    #copyButton { width: 100%; }
+
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .history-header h3 { margin-bottom: 8px; }
+
+    #clearHistory {
+      background: #e2e8f0;
+      color: #334155;
+      font-size: 11px;
+    }
+
+    #history {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .history-item button {
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    .history-item small {
+      display: block;
+      color: #64748b;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Copy With Context</h2>
+
+  <p id="status">Checking selected text...</p>
+  <div id="preview">Loading...</div>
+
+  <br>
+  <button id="copyButton" disabled>Copy as Markdown</button>
+
+  <div class="history-header">
+    <h3>Copy History</h3>
+    <button id="clearHistory">Clear history</button>
+  </div>
+
+  <div id="history"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

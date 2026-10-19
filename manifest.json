@@ -1,0 +1,17 @@
+
+{
+  "manifest_version": 3,
+  "name": "Copy With Context",
+  "version": "1.0.0",
+  "description": "Copy selected text with its source URL.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "storage"
+  ],
+  "action": {
+    "default_title": "Copy With Context",
+    "default_popup": "popup.html"
+  }
+}
